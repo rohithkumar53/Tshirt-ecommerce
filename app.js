@@ -36,5 +36,9 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", paymentBRoutes);
 
+
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('projfrontend/build'));
+};
 //Starting a server
 app.listen(port, ()=> console.log(`Server is listening on port ${port}`));
