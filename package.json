@@ -5,9 +5,12 @@
   "main": "app.js",
   "scripts": {
     "dev": "supervisor app.js",
+    "build": "cd projfrontend && npm run build",
+    "install-client":"cd projfrontend && npm install",
+    "heroku-postbuild":"npm run install-client && npm run build",
     "server": "supervisor app.js",
-    "client": "npm run start --prefix projfrontend",
-    "start": "concurrently \"npm run server\" \"cd projfrontend && npm run client\""
+    "client": "cd projfrontend && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
     
   },
   "keywords": [],
