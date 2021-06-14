@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "supervisor app.js",
+    "dev": "supervisor app.js",
     "server": "supervisor app.js",
     "client": "npm run start --prefix projfrontend",
-    "dev": "concurrently \"npm run server\" \"cd projfrontend && npm run client\""
+    "start": "concurrently \"npm run server\" \"cd projfrontend && npm run client\""
     
   },
   "keywords": [],
